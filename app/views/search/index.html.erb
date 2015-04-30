@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search</title>
+</head>
+<body>
+	<%= form_tag("/search", method: "get") do %>
+	  <%= label_tag(:q, "Search for:") %>
+	  <%= text_field_tag(:q) %>
+	  <%= submit_tag("Search") %>
+	<% end %>
+
+	<% @movie_body.each do |movie_body|  %>
+		<div>
+		<%= movie_body["Title"] %>
+		</div>
+		<% end  %>
+
+</body>
+</html>
